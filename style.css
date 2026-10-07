@@ -1,0 +1,38 @@
+/* 모아냥 사이트 공용 스타일 — 앱과 같은 종이색·먹색. 색은 쓰지 않는다(앱 원칙: 색은 사진에만). */
+:root {
+  --paper: #fdfcf8;
+  --ink: #171512;
+  --muted: #6f6a5e;
+  --line: rgba(40, 36, 32, 0.18);
+  --frame: #f1efec;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Hiragino Sans', 'Malgun Gothic', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+/* 한국어만 단어 중간에서 줄이 안 바뀌게. 일본어는 띄어쓰기가 없어 keep-all이면 문장부호에서만 끊겨 줄이 들쭉날쭉해진다. */
+:lang(ko) { word-break: keep-all; }
+:lang(ja) { line-break: strict; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 80px; }
+.lang { display: flex; gap: 12px; justify-content: flex-end; font-size: 14px; margin-bottom: 24px; }
+.lang a { color: var(--muted); text-decoration: none; }
+.lang a[aria-current='page'] { color: var(--ink); font-weight: 800; }
+h1 { font-size: 28px; line-height: 1.3; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+.summary { background: var(--frame); border: 1px solid var(--line); padding: 16px 20px; margin: 24px 0; }
+.summary ul { margin: 0; padding-left: 20px; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--frame); font-weight: 700; white-space: nowrap; }
+a { color: var(--ink); }
+footer { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+footer a { color: var(--muted); }
