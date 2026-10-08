@@ -30,7 +30,7 @@
 <h2>1. Information we collect</h2>
 <table>
 <tr><th>Information</th><th>When</th><th>Why</th></tr>
-<tr><td>Device identifier (a random value iOS creates per developer, identifierForVendor)</td><td>When the app first connects to our server</td><td>To keep count of the films (conversions) available on your device</td></tr>
+<tr><td>Device identifier (a random value set when the app first runs; on iPhone it is kept in the device Keychain and, if iCloud Keychain is on, synced to devices on the same Apple Account)</td><td>When the app first connects to our server</td><td>To keep count of the films (conversions) available on your device</td></tr>
 <tr><td>Photo you take</td><td>When you tap “Create from this photo”</td><td>To turn it into pixel art</td></tr>
 <tr><td>Apple transaction number, product, number of films, environment (live/test), time</td><td>When you buy a film pack</td><td>To confirm the purchase with Apple and add your films exactly once</td></tr>
 <tr><td>Daily conversion count, last-used time</td><td>When you use our server</td><td>To prevent abuse and to delete inactive records on time</td></tr>
@@ -49,7 +49,7 @@
 <tr><td>Film pack purchase records</td><td>5 years (record-keeping for payments)</td></tr>
 <tr><td>Daily conversion count</td><td>2 days</td></tr>
 </table>
-<p>Expired records are deleted automatically every day. If you delete the app, iOS issues a new device identifier, so the old record is no longer linked to you and is deleted on the schedule above. Any films left on it are lost.</p>
+<p>Expired records are deleted automatically every day. Because the identifier is kept in the Keychain, it survives deleting and reinstalling the app, and your remaining films carry over. If you stop using the app, the server record is deleted on the schedule above. The identifier in the Keychain is removed when you erase the iPhone.</p>
 
 <h2>3. Service providers</h2>
 <p>We do not sell or share your information with third parties. We use these service providers, both located in the United States, to run the app:</p>
@@ -84,6 +84,6 @@
 <h2>9. Contact</h2>
 <p>MoaNyang operator · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></p>
 </main>
-<footer>MoaNyang · <a href="../index.html">Support</a> · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></footer>
+<footer>MoaNyang · <a href="index.html">Support</a> · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></footer>
 </body>
 </html>

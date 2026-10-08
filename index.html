@@ -3,63 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>모아냥 MoaNyang 지원</title>
-<link rel="stylesheet" href="style.css">
+<title>모아냥 — 안 쓴 돈으로 갖고 싶은 물건을 물들여요</title>
+<meta name="description" content="안 쓴 돈을 하루 한 번 적으면, 갖고 싶은 물건 사진이 모은 만큼 물들어요.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<main>
-<nav class="lang"><a href="#ko">한국어</a><a href="#ja">日本語</a><a href="#en">English</a></nav>
+<div class="board">
+  <header class="top">
+    <a class="logo" href="./"><img src="assets/icon.png" alt="" width="40" height="40">모아냥</a>
+    <nav><a href="./" aria-current="page">한국어</a><a href="ja/">日本語</a><a href="en/">English</a></nav>
+  </header>
 
-<section id="ko" lang="ko">
-<h1>모아냥 지원</h1>
-<p class="meta">안 쓴 돈을 하루 한 번 기록하고, 갖고 싶은 물건을 살 수 있게 되는 과정을 보여주는 앱</p>
-<p>문의: <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a> · <a href="privacy.html">개인정보 처리방침</a></p>
+  <!-- ① 첫 화면: 제목 쪽지 · 앱 화면 · 물드는 폴라로이드 · 고양이 -->
+  <section class="hero">
+    <div class="note">
+      <span class="tape" style="--tape-rot: 3deg"></span>
+      <h1>안 쓴 돈으로<br>갖고 싶은 걸<br>물들여요</h1>
+      <p>커피 한 잔, 택시 한 번. 오늘 아낀 돈을 적으면 찍어 둔 물건 사진이 모은 만큼 색으로 차올라요.</p>
+      <span class="soon">App Store <small>곧 출시</small></span>
+    </div>
 
-<h2>자주 묻는 질문</h2>
-<h3>기록은 어디에 저장되나요?</h3>
-<p>모은 돈, 날짜별 기록, 물건 목록은 모두 이 기기에만 저장됩니다. 서버에 백업되지 않으므로 앱을 삭제하면 기록도 함께 사라집니다.</p>
-<h3>필름이 뭔가요?</h3>
-<p>물건 사진을 픽셀 그림으로 바꿀 때 한 장씩 쓰입니다. 처음 한 장은 무료이고, 이후에는 필름 팩을 사서 쓸 수 있습니다. 변환에 실패하면 필름은 돌아옵니다.</p>
-<h3>앱을 지웠다 다시 깔았더니 필름이 없어졌어요.</h3>
-<p>필름은 로그인 없이 기기별로 관리되기 때문에, 앱을 삭제하면 남은 필름을 되살릴 수 없습니다. 결제 후 필름이 들어오지 않았다면 결제한 날짜와 상품을 적어 메일로 문의해 주세요.</p>
-<h3>사진은 어디로 보내지나요?</h3>
-<p>픽셀 그림으로 바꾸기 위해 외부 AI 서비스(fal.ai)로 보내지며, 저장되지 않습니다. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>을 확인해 주세요.</p>
-<h3>환불은 어떻게 하나요?</h3>
-<p>결제는 Apple이 처리하므로 환불도 Apple에 요청해야 합니다. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>에서 신청할 수 있습니다.</p>
-</section>
+    <div class="hero-stage">
+      <figure class="phone" style="--rot: 3deg">
+        <span class="tape"></span>
+        <img src="assets/screens/ko-home.webp" alt="모아냥 앱 화면" width="600" height="1299">
+      </figure>
+      <!-- 처음엔 흑백, 페이지가 열리면 아래에서부터 45%까지 물든다(앱의 대표 순간) -->
+      <div class="pol hero-pol" id="hero-pol" style="--rot: -6deg">
+        <span class="tape"></span>
+        <div class="win">
+          <img src="assets/onboarding-tumbler.png" alt="픽셀 그림 텀블러">
+          <img class="gray" src="assets/onboarding-tumbler.png" alt="" aria-hidden="true">
+        </div>
+        <div class="lab"><b>텀블러</b><i>45% 모았어요</i></div>
+      </div>
+      <p class="hand hero-hand">하루 10초면 끝!</p>
+      <svg class="arrow hero-arrow" viewBox="0 0 120 80" aria-hidden="true"><path d="M8 12c30 4 66 18 88 52"/><path d="M80 58l17 8 2-19"/></svg>
+    </div>
 
-<section id="ja" lang="ja">
-<h2 style="border-top: 2px solid var(--ink); font-size: 24px;">モアニャン サポート</h2>
-<p class="meta">使わなかったお金を1日1回記録して、ほしいものが買えるようになるまでを見せてくれるアプリ</p>
-<p>お問い合わせ：<a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a> · <a href="ja/privacy.html">プライバシーポリシー</a></p>
-<h3>記録はどこに保存されますか？</h3>
-<p>たまったお金、日ごとの記録、ほしいものリストはすべてこの端末にのみ保存されます。サーバーにはバックアップされないため、アプリを削除すると記録も消えます。</p>
-<h3>フィルムとは何ですか？</h3>
-<p>写真をドット絵に変換するときに1枚ずつ使います。最初の1枚は無料で、その後はフィルムパックを購入して使えます。変換に失敗した場合、フィルムは戻ります。</p>
-<h3>アプリを入れ直したらフィルムがなくなりました。</h3>
-<p>フィルムはログインなしで端末ごとに管理しているため、アプリを削除すると残りのフィルムは復元できません。購入後にフィルムが届かない場合は、購入日と商品を添えてメールでお問い合わせください。</p>
-<h3>写真はどこに送られますか？</h3>
-<p>ドット絵に変換するため外部のAIサービス（fal.ai）に送信され、保存されません。詳しくは<a href="ja/privacy.html">プライバシーポリシー</a>をご確認ください。</p>
-<h3>返金するには？</h3>
-<p>決済はAppleが行うため、返金もAppleにご請求ください。<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>から申請できます。</p>
-</section>
+    <div class="cat">
+      <p class="bubble">오늘 아낀 돈만큼<br>사진이 물든다냥</p>
+      <img src="assets/cat-hero.png" alt="모아냥 고양이">
+    </div>
+  </section>
 
-<section id="en" lang="en">
-<h2 style="border-top: 2px solid var(--ink); font-size: 24px;">MoaNyang Support</h2>
-<p class="meta">Log the money you didn’t spend once a day, and watch the things you want come within reach.</p>
-<p>Contact: <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a> · <a href="en/privacy.html">Privacy Policy</a></p>
-<h3>Where are my records stored?</h3>
-<p>Your savings, daily log, and wish list are stored only on this device. They aren’t backed up to a server, so deleting the app deletes them too.</p>
-<h3>What are films?</h3>
-<p>One film is used each time a photo is turned into pixel art. Your first film is free; after that you can buy film packs. If a conversion fails, the film is returned.</p>
-<h3>I reinstalled the app and my films are gone.</h3>
-<p>Films are tracked per device without an account, so they can’t be restored after the app is deleted. If films didn’t arrive after a purchase, email us with the purchase date and product.</p>
-<h3>Where do my photos go?</h3>
-<p>They’re sent to an external AI service (fal.ai) to make the pixel art and aren’t stored. See the <a href="en/privacy.html">Privacy Policy</a> for details.</p>
-<h3>How do I get a refund?</h3>
-<p>Apple processes all payments, so refunds are requested from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
-</section>
-</main>
-<footer>모아냥 · MoaNyang · モアニャン · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></footer>
+  <!-- ② 이렇게 써요: 앱 화면과 설명이 지그재그로 -->
+  <section class="section">
+    <h2 class="section-title">이렇게 써요</h2>
+    <ol class="flow">
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: -2deg">
+          <span class="tape"></span>
+          <img src="assets/screens/ko-entry.webp" alt="모아냥 앱 화면" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: 1deg">
+          <span class="stamp">01</span>
+          <h3>안 쓴 돈을 적어요</h3>
+          <p>오늘 아낀 돈을 동전과 지폐를 눌러 하루 한 번 적어요. 커피든 택시든, 무엇을 아꼈든 상관없어요.</p>
+          <p class="hand">톡톡 누르고 기록!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="snap" style="--rot: 2deg">
+          <span class="tape"></span>
+          <img src="assets/screens/ko-board.webp" alt="모아냥 앱 화면" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: -1deg">
+          <span class="stamp">02</span>
+          <h3>갖고 싶은 걸 찍어요</h3>
+          <p>사진을 찍으면 AI가 픽셀 그림 폴라로이드로 바꿔서 나무 보드에 붙여 줘요. 처음엔 흑백이에요.</p>
+          <p class="hand">내 보드에 착!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: 2.5deg">
+          <span class="tape"></span>
+          <img src="assets/screens/ko-detail.webp" alt="모아냥 앱 화면" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: -1.2deg">
+          <span class="stamp">03</span>
+          <h3>모은 만큼 물들어요</h3>
+          <p>기록할수록 사진이 아래에서부터 색으로 차올라요. 얼마 남았는지도 바로 보여요. 다 물들면 살 수 있다는 뜻이에요.</p>
+          <p class="hand">반쯤 왔다!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: -1.5deg">
+          <span class="tape"></span>
+          <img src="assets/screens/ko-shop.webp" alt="모아냥 앱 화면" loading="lazy">
+          <img class="flow-cat" src="assets/cat-beret.png" alt="베레모와 목도리를 한 고양이" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: 1.4deg">
+          <span class="stamp">04</span>
+          <h3>사면 고양이를 꾸며요</h3>
+          <p>물건을 사면 코인이 생겨요. 코인으로 고양이에게 모자 · 목걸이 · 안경을 씌워 줘요.</p>
+          <p class="hand">오늘은 베레모</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ③ 기록 탭 -->
+  <section class="section">
+    <div class="feature">
+      <figure class="phone" style="--rot: -2.5deg">
+        <span class="tape"></span>
+        <img src="assets/screens/ko-history.webp" alt="모아냥 앱 화면" width="600" height="1299" loading="lazy">
+      </figure>
+      <div class="card" style="--rot: 1deg">
+        <h2>돌아보면 뿌듯해요</h2>
+        <p>기록 탭에서 날마다 얼마 아꼈는지 한눈에 봐요. 많이 아낀 날일수록 진하게, 물건을 산 날엔 그 사진이 붙어요.</p>
+        <p class="hand">텀블러 산 날!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 고양이 꾸미기 -->
+  <section class="section">
+    <h2 class="section-title">아낀 만큼 멋져지는 고양이</h2>
+    <div class="cats">
+      <figure><img src="assets/cat-santa.png" alt="산타모자와 하트 목걸이를 한 고양이" loading="lazy"></figure>
+      <figure class="cats-mid">
+        <p class="bubble">모자 하나가<br>물건 하나다냥</p>
+        <img src="assets/cat-beanie.png" alt="비니와 방울, 동그란 안경을 쓴 고양이" loading="lazy">
+      </figure>
+      <figure><img src="assets/cat-beret.png" alt="베레모와 목도리를 한 고양이" loading="lazy"></figure>
+    </div>
+    <p class="cats-caption">모자 · 목걸이 · 안경 15가지. 고양이를 꾸민 만큼 실제로 산 물건이 늘어나요.</p>
+  </section>
+
+  <!-- ⑤ 공유: 앱이 만드는 공유 그림을 스토리 화면에 올린 모습 -->
+  <section class="section">
+    <div class="share">
+      <div class="stories">
+        <figure class="story" style="--rot: -4deg">
+          <span class="story-bar"><i></i><i></i></span>
+          <span class="story-who"><img src="assets/icon.png" alt="">모아냥</span>
+          <img class="story-img" src="assets/share/ko-pol.webp" alt="인스타그램 스토리에 올린 모습" loading="lazy">
+        </figure>
+        <figure class="story" style="--rot: 3deg">
+          <span class="story-bar"><i></i><i></i></span>
+          <span class="story-who"><img src="assets/icon.png" alt="">모아냥</span>
+          <img class="story-img" src="assets/share/ko-cat.webp" alt="인스타그램 스토리에 올린 모습" loading="lazy">
+        </figure>
+      </div>
+      <div class="card" style="--rot: -1deg">
+        <h2>자랑하고 싶을 땐</h2>
+        <p>폴라로이드와 꾸민 고양이를 예쁜 그림으로 만들어 인스타그램 스토리에 바로 올리거나 친구에게 보내요. 가격과 모은 금액을 보여줄지는 올리기 전에 고를 수 있어요.</p>
+        <p class="hand">스토리에 바로 올리기!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 약속 세 가지: 메모지 -->
+  <section class="section">
+    <ul class="promises">
+      <li style="--rot: -2deg"><span class="pin"></span><b>가입 없이 바로</b><span>이메일도 비밀번호도 없어요. 켜자마자 써요.</span></li>
+      <li style="--rot: 1.5deg"><span class="pin"></span><b>기록은 내 폰에만</b><span>모은 돈과 기록은 서버로 보내지 않아요. 백업 파일로 직접 챙길 수 있어요.</span></li>
+      <li style="--rot: -1deg"><span class="pin"></span><b>광고 없음</b><span>화면을 가리는 광고가 없어요. 첫 사진 한 장은 무료예요.</span></li>
+    </ul>
+  </section>
+
+  <!-- ⑦ 자주 묻는 질문 · 문의 (지원 페이지) -->
+  <section class="section" id="faq">
+    <div class="sheet">
+      <span class="tape"></span>
+      <h2>자주 묻는 질문</h2>
+      <h3>기록은 어디에 저장되나요?</h3>
+      <p>모은 돈, 날짜별 기록, 물건 목록은 모두 내 기기에만 저장돼요. 서버에는 보내지 않아서 앱을 삭제하면 기록도 함께 사라져요. 앱을 지우거나 폰을 바꾸기 전에 <b>설정 → 백업 파일 만들기</b>로 파일을 저장해 두면, 그 파일로 언제든 되살릴 수 있어요.</p>
+      <h3>필름이 뭔가요?</h3>
+      <p>물건 사진을 픽셀 그림으로 바꿀 때 한 장씩 쓰여요. 처음 한 장은 무료이고, 그 뒤로는 필름 팩을 사서 쓸 수 있어요. 변환에 실패하면 필름은 돌아와요.</p>
+      <h3>앱을 지웠다 다시 깔면 필름은 어떻게 되나요?</h3>
+      <p>그대로 남아 있어요. 필름은 아이폰 키체인에 보관된 번호로 관리돼서 다시 설치해도 이어지고, iCloud 키체인을 켜 두면 같은 Apple 계정의 새 아이폰으로도 넘어가요. 결제했는데 필름이 들어오지 않았다면 결제한 날짜와 상품을 적어 메일로 알려 주세요.</p>
+      <h3>사진은 어디로 보내지나요?</h3>
+      <p>픽셀 그림으로 바꾸기 위해 외부 AI 서비스(fal.ai)로 보내지고, 저장되지 않아요. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>에 있어요.</p>
+      <h3>환불은 어떻게 하나요?</h3>
+      <p>결제는 Apple이 처리해서 환불도 Apple에 요청해야 해요. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>에서 신청할 수 있어요.</p>
+      <p class="contact">문의 <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="foot">모아냥 · <a href="privacy.html">개인정보 처리방침</a> · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></footer>
+</div>
+<script>
+  // 첫 그림을 그린 뒤에 값을 바꿔야 CSS 전환이 걸린다(처음부터 0.45면 물드는 모습이 안 보인다).
+  requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('hero-pol').classList.add('filled')));
+  // 아래 칸의 앱 화면·쪽지는 화면에 들어올 때 살짝 떠오른다(한 번만).
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.2 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
 </body>
 </html>

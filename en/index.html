@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoaNyang — Color in what you want with money you didn’t spend</title>
+<meta name="description" content="Log the money you didn’t spend once a day, and a photo of what you want fills with color as you save.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../landing.css">
+</head>
+<body>
+<div class="board">
+  <header class="top">
+    <a class="logo" href="./"><img src="../assets/icon.png" alt="" width="40" height="40">MoaNyang</a>
+    <nav><a href="../">한국어</a><a href="../ja/">日本語</a><a href="./" aria-current="page">English</a></nav>
+  </header>
+
+  <!-- ① 첫 화면: 제목 쪽지 · 앱 화면 · 물드는 폴라로이드 · 고양이 -->
+  <section class="hero">
+    <div class="note">
+      <span class="tape" style="--tape-rot: 3deg"></span>
+      <h1>Skip it.<br>Save it.<br>Color it in.</h1>
+      <p>A coffee here, a cab ride there. Log what you saved today, and the photo of what you want fills with color as you go.</p>
+      <span class="soon">App Store <small>Coming soon</small></span>
+    </div>
+
+    <div class="hero-stage">
+      <figure class="phone" style="--rot: 3deg">
+        <span class="tape"></span>
+        <img src="../assets/screens/en-home.webp" alt="MoaNyang app screen" width="600" height="1299">
+      </figure>
+      <!-- 처음엔 흑백, 페이지가 열리면 아래에서부터 45%까지 물든다(앱의 대표 순간) -->
+      <div class="pol hero-pol" id="hero-pol" style="--rot: -6deg">
+        <span class="tape"></span>
+        <div class="win">
+          <img src="../assets/onboarding-tumbler.png" alt="Pixel-art tumbler">
+          <img class="gray" src="../assets/onboarding-tumbler.png" alt="" aria-hidden="true">
+        </div>
+        <div class="lab"><b>Tumbler</b><i>45% saved</i></div>
+      </div>
+      <p class="hand hero-hand">10 seconds a day!</p>
+      <svg class="arrow hero-arrow" viewBox="0 0 120 80" aria-hidden="true"><path d="M8 12c30 4 66 18 88 52"/><path d="M80 58l17 8 2-19"/></svg>
+    </div>
+
+    <div class="cat">
+      <p class="bubble">Save a little,<br>color a little, meow</p>
+      <img src="../assets/cat-hero.png" alt="The MoaNyang cat">
+    </div>
+  </section>
+
+  <!-- ② 이렇게 써요: 앱 화면과 설명이 지그재그로 -->
+  <section class="section">
+    <h2 class="section-title">How it works</h2>
+    <ol class="flow">
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: -2deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/en-entry.webp" alt="MoaNyang app screen" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: 1deg">
+          <span class="stamp">01</span>
+          <h3>Log what you didn’t spend</h3>
+          <p>Tap coins and bills to log what you saved, once a day. Coffee, a cab ride — whatever you skipped counts.</p>
+          <p class="hand">tap, tap, done!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="snap" style="--rot: 2deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/en-board.webp" alt="MoaNyang app screen" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: -1deg">
+          <span class="stamp">02</span>
+          <h3>Snap what you want</h3>
+          <p>AI turns your photo into a pixel-art snapshot and pins it to your wooden board. It starts out black and white.</p>
+          <p class="hand">pinned to my board!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: 2.5deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/en-detail.webp" alt="MoaNyang app screen" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: -1.2deg">
+          <span class="stamp">03</span>
+          <h3>It fills as you save</h3>
+          <p>The more you log, the higher the color rises — and you can see exactly how much is left. When it’s full, you can afford it.</p>
+          <p class="hand">halfway there!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: -1.5deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/en-shop.webp" alt="MoaNyang app screen" loading="lazy">
+          <img class="flow-cat" src="../assets/cat-beret.png" alt="Cat in a beret and scarf" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: 1.4deg">
+          <span class="stamp">04</span>
+          <h3>Buy it, dress your cat</h3>
+          <p>Buying earns coins. Spend them on hats, necklaces and glasses for your cat.</p>
+          <p class="hand">beret day</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ③ 기록 탭 -->
+  <section class="section">
+    <div class="feature">
+      <figure class="phone" style="--rot: -2.5deg">
+        <span class="tape"></span>
+        <img src="../assets/screens/en-history.webp" alt="MoaNyang app screen" width="600" height="1299" loading="lazy">
+      </figure>
+      <div class="card" style="--rot: 1deg">
+        <h2>Look back and smile</h2>
+        <p>The History tab shows how much you saved each day. Bigger days get darker, and the days you bought something get its photo.</p>
+        <p class="hand">bought the tumbler!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 고양이 꾸미기 -->
+  <section class="section">
+    <h2 class="section-title">The more you save, the fancier the cat</h2>
+    <div class="cats">
+      <figure><img src="../assets/cat-santa.png" alt="Cat in a Santa hat and heart necklace" loading="lazy"></figure>
+      <figure class="cats-mid">
+        <p class="bubble">Every hat is<br>a thing you bought, meow</p>
+        <img src="../assets/cat-beanie.png" alt="Cat in a beanie, bell and round glasses" loading="lazy">
+      </figure>
+      <figure><img src="../assets/cat-beret.png" alt="Cat in a beret and scarf" loading="lazy"></figure>
+    </div>
+    <p class="cats-caption">15 hats, necklaces and glasses. The fancier your cat, the more you’ve actually bought.</p>
+  </section>
+
+  <!-- ⑤ 공유: 앱이 만드는 공유 그림을 스토리 화면에 올린 모습 -->
+  <section class="section">
+    <div class="share">
+      <div class="stories">
+        <figure class="story" style="--rot: -4deg">
+          <span class="story-bar"><i></i><i></i></span>
+          <span class="story-who"><img src="../assets/icon.png" alt="">MoaNyang</span>
+          <img class="story-img" src="../assets/share/en-pol.webp" alt="Posted to an Instagram Story" loading="lazy">
+        </figure>
+        <figure class="story" style="--rot: 3deg">
+          <span class="story-bar"><i></i><i></i></span>
+          <span class="story-who"><img src="../assets/icon.png" alt="">MoaNyang</span>
+          <img class="story-img" src="../assets/share/en-cat.webp" alt="Posted to an Instagram Story" loading="lazy">
+        </figure>
+      </div>
+      <div class="card" style="--rot: -1deg">
+        <h2>Show it off</h2>
+        <p>Turn your snapshot or dressed-up cat into a clean image and post it straight to your Instagram Story, or send it to a friend. Choose whether to show the price or your total before you share.</p>
+        <p class="hand">straight to your Story!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 약속 세 가지: 메모지 -->
+  <section class="section">
+    <ul class="promises">
+      <li style="--rot: -2deg"><span class="pin"></span><b>No sign-up</b><span>No email, no password. Open it and go.</span></li>
+      <li style="--rot: 1.5deg"><span class="pin"></span><b>Your records stay on your phone</b><span>Your savings and logs are never sent to a server. Keep them safe with a backup file.</span></li>
+      <li style="--rot: -1deg"><span class="pin"></span><b>No ads</b><span>Nothing covers your screen. Your first photo is free.</span></li>
+    </ul>
+  </section>
+
+  <!-- ⑦ 자주 묻는 질문 · 문의 (지원 페이지) -->
+  <section class="section" id="faq">
+    <div class="sheet">
+      <span class="tape"></span>
+      <h2>FAQ</h2>
+      <h3>Where are my records stored?</h3>
+      <p>Your savings, daily log, and wish list are stored only on this device. They aren’t sent to a server, so deleting the app deletes them too. Before deleting the app or switching phones, save a file with <b>Settings → Make a backup file</b> — you can restore from it anytime.</p>
+      <h3>What are films?</h3>
+      <p>One film is used each time a photo is turned into pixel art. Your first film is free; after that you can buy film packs. If a conversion fails, the film is returned.</p>
+      <h3>What happens to my films if I reinstall the app?</h3>
+      <p>They stay. Films are tied to a number kept in your iPhone’s Keychain, so they carry over when you reinstall — and to a new iPhone on the same Apple Account if iCloud Keychain is on. If films didn’t arrive after a purchase, email us with the purchase date and product.</p>
+      <h3>Where do my photos go?</h3>
+      <p>They’re sent to an external AI service (fal.ai) to make the pixel art and aren’t stored. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+      <h3>How do I get a refund?</h3>
+      <p>Apple processes all payments, so refunds are requested from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      <p class="contact">Contact <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="foot">MoaNyang · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></footer>
+</div>
+<script>
+  // 첫 그림을 그린 뒤에 값을 바꿔야 CSS 전환이 걸린다(처음부터 0.45면 물드는 모습이 안 보인다).
+  requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('hero-pol').classList.add('filled')));
+  // 아래 칸의 앱 화면·쪽지는 화면에 들어올 때 살짝 떠오른다(한 번만).
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.2 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>

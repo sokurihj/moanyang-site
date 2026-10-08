@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>モアニャン — 使わなかったお金で、ほしいものに色をつけよう</title>
+<meta name="description" content="使わなかったお金を1日1回記録すると、ほしいものの写真がたまったぶんだけ色づきます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../landing.css">
+</head>
+<body>
+<div class="board">
+  <header class="top">
+    <a class="logo" href="./"><img src="../assets/icon.png" alt="" width="40" height="40">モアニャン</a>
+    <nav><a href="../">한국어</a><a href="./" aria-current="page">日本語</a><a href="../en/">English</a></nav>
+  </header>
+
+  <!-- ① 첫 화면: 제목 쪽지 · 앱 화면 · 물드는 폴라로이드 · 고양이 -->
+  <section class="hero">
+    <div class="note">
+      <span class="tape" style="--tape-rot: 3deg"></span>
+      <h1>使わなかったお金で<br>ほしいものに<br>色をつけよう</h1>
+      <p>コーヒー1杯、タクシー1回。今日節約したお金を記録すると、撮っておいたほしいものの写真が、たまったぶんだけ色づきます。</p>
+      <span class="soon">App Store <small>近日公開</small></span>
+    </div>
+
+    <div class="hero-stage">
+      <figure class="phone" style="--rot: 3deg">
+        <span class="tape"></span>
+        <img src="../assets/screens/ja-home.webp" alt="モアニャンのアプリ画面" width="600" height="1299">
+      </figure>
+      <!-- 처음엔 흑백, 페이지가 열리면 아래에서부터 45%까지 물든다(앱의 대표 순간) -->
+      <div class="pol hero-pol" id="hero-pol" style="--rot: -6deg">
+        <span class="tape"></span>
+        <div class="win">
+          <img src="../assets/onboarding-tumbler.png" alt="ドット絵のタンブラー">
+          <img class="gray" src="../assets/onboarding-tumbler.png" alt="" aria-hidden="true">
+        </div>
+        <div class="lab"><b>タンブラー</b><i>45%たまりました</i></div>
+      </div>
+      <p class="hand hero-hand">1日10秒でおしまい!</p>
+      <svg class="arrow hero-arrow" viewBox="0 0 120 80" aria-hidden="true"><path d="M8 12c30 4 66 18 88 52"/><path d="M80 58l17 8 2-19"/></svg>
+    </div>
+
+    <div class="cat">
+      <p class="bubble">節約したぶんだけ<br>写真が色づくにゃ</p>
+      <img src="../assets/cat-hero.png" alt="モアニャンのねこ">
+    </div>
+  </section>
+
+  <!-- ② 이렇게 써요: 앱 화면과 설명이 지그재그로 -->
+  <section class="section">
+    <h2 class="section-title">使い方</h2>
+    <ol class="flow">
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: -2deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/ja-entry.webp" alt="モアニャンのアプリ画面" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: 1deg">
+          <span class="stamp">01</span>
+          <h3>使わなかったお金を記録</h3>
+          <p>今日節約したお金を、硬貨とお札を押して1日1回記録します。コーヒーでもタクシーでも、何を節約したかは問いません。</p>
+          <p class="hand">ポチッと記録!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="snap" style="--rot: 2deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/ja-board.webp" alt="モアニャンのアプリ画面" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: -1deg">
+          <span class="stamp">02</span>
+          <h3>ほしいものを撮る</h3>
+          <p>写真を撮ると、AIがドット絵のインスタント写真にして木のボードに貼ってくれます。最初は白黒です。</p>
+          <p class="hand">ボードにペタッ!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: 2.5deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/ja-detail.webp" alt="モアニャンのアプリ画面" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: -1.2deg">
+          <span class="stamp">03</span>
+          <h3>ためたぶんだけ色づく</h3>
+          <p>記録するほど、写真が下から色で満ちていきます。あといくらかもすぐわかります。全部色づいたら、買えるという合図です。</p>
+          <p class="hand">半分まできた!</p>
+        </div>
+      </li>
+      <li class="flow-row reveal">
+        <figure class="phone" style="--rot: -1.5deg">
+          <span class="tape"></span>
+          <img src="../assets/screens/ja-shop.webp" alt="モアニャンのアプリ画面" loading="lazy">
+          <img class="flow-cat" src="../assets/cat-beret.png" alt="ベレー帽とマフラーをつけたねこ" loading="lazy">
+        </figure>
+        <div class="card" style="--rot: 1.4deg">
+          <span class="stamp">04</span>
+          <h3>買ったら、ねこをおしゃれに</h3>
+          <p>買うとコインがもらえます。コインで、ねこに帽子・ネックレス・メガネをつけてあげられます。</p>
+          <p class="hand">今日はベレー帽</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ③ 기록 탭 -->
+  <section class="section">
+    <div class="feature">
+      <figure class="phone" style="--rot: -2.5deg">
+        <span class="tape"></span>
+        <img src="../assets/screens/ja-history.webp" alt="モアニャンのアプリ画面" width="600" height="1299" loading="lazy">
+      </figure>
+      <div class="card" style="--rot: 1deg">
+        <h2>ふりかえると、うれしい</h2>
+        <p>記録タブで、毎日いくら節約したかがひと目でわかります。たくさん節約した日ほど濃く、買った日にはその写真が貼られます。</p>
+        <p class="hand">タンブラーを買った日!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 고양이 꾸미기 -->
+  <section class="section">
+    <h2 class="section-title">節約するほど、おしゃれになるねこ</h2>
+    <div class="cats">
+      <figure><img src="../assets/cat-santa.png" alt="サンタ帽とハートのネックレスをつけたねこ" loading="lazy"></figure>
+      <figure class="cats-mid">
+        <p class="bubble">帽子ひとつが<br>買えたものひとつにゃ</p>
+        <img src="../assets/cat-beanie.png" alt="ニット帽と鈴、丸メガネのねこ" loading="lazy">
+      </figure>
+      <figure><img src="../assets/cat-beret.png" alt="ベレー帽とマフラーをつけたねこ" loading="lazy"></figure>
+    </div>
+    <p class="cats-caption">帽子・ネックレス・メガネ、全15種類。ねこがおしゃれになったぶん、実際に買えたものが増えていきます。</p>
+  </section>
+
+  <!-- ⑤ 공유: 앱이 만드는 공유 그림을 스토리 화면에 올린 모습 -->
+  <section class="section">
+    <div class="share">
+      <div class="stories">
+        <figure class="story" style="--rot: -4deg">
+          <span class="story-bar"><i></i><i></i></span>
+          <span class="story-who"><img src="../assets/icon.png" alt="">モアニャン</span>
+          <img class="story-img" src="../assets/share/ja-pol.webp" alt="Instagramのストーリーズに投稿したところ" loading="lazy">
+        </figure>
+        <figure class="story" style="--rot: 3deg">
+          <span class="story-bar"><i></i><i></i></span>
+          <span class="story-who"><img src="../assets/icon.png" alt="">モアニャン</span>
+          <img class="story-img" src="../assets/share/ja-cat.webp" alt="Instagramのストーリーズに投稿したところ" loading="lazy">
+        </figure>
+      </div>
+      <div class="card" style="--rot: -1deg">
+        <h2>自慢したくなったら</h2>
+        <p>インスタント写真やおしゃれしたねこを、きれいな画像にしてInstagramのストーリーズにそのまま投稿したり、友だちに送ったりできます。値段やためた金額を表示するかは、投稿前に選べます。</p>
+        <p class="hand">ストーリーズにそのまま!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 약속 세 가지: 메모지 -->
+  <section class="section">
+    <ul class="promises">
+      <li style="--rot: -2deg"><span class="pin"></span><b>登録なしですぐ使える</b><span>メールアドレスもパスワードもいりません。開いたらすぐ使えます。</span></li>
+      <li style="--rot: 1.5deg"><span class="pin"></span><b>記録はスマホの中だけ</b><span>たまったお金や記録はサーバーに送りません。バックアップファイルで自分で守れます。</span></li>
+      <li style="--rot: -1deg"><span class="pin"></span><b>広告なし</b><span>画面をふさぐ広告はありません。最初の1枚は無料です。</span></li>
+    </ul>
+  </section>
+
+  <!-- ⑦ 자주 묻는 질문 · 문의 (지원 페이지) -->
+  <section class="section" id="faq">
+    <div class="sheet">
+      <span class="tape"></span>
+      <h2>よくある質問</h2>
+      <h3>記録はどこに保存されますか？</h3>
+      <p>たまったお金、日ごとの記録、ほしいものリストはすべてこの端末にのみ保存されます。サーバーには送られないため、アプリを削除すると記録も消えます。アプリの削除や機種変更の前に<b>設定 → バックアップファイルを作る</b>でファイルを保存しておけば、そのファイルからいつでも戻せます。</p>
+      <h3>フィルムとは何ですか？</h3>
+      <p>写真をドット絵に変換するときに1枚ずつ使います。最初の1枚は無料で、その後はフィルムパックを購入して使えます。変換に失敗した場合、フィルムは戻ります。</p>
+      <h3>アプリを入れ直すとフィルムはどうなりますか？</h3>
+      <p>そのまま残ります。フィルムはiPhoneのキーチェーンに保管した番号で管理しているため、再インストールしても引き継がれ、iCloudキーチェーンをオンにしていれば同じApple アカウントの新しいiPhoneにも引き継がれます。購入後にフィルムが届かない場合は、購入日と商品を添えてメールでお問い合わせください。</p>
+      <h3>写真はどこに送られますか？</h3>
+      <p>ドット絵に変換するため外部のAIサービス（fal.ai）に送信され、保存されません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+      <h3>返金するには？</h3>
+      <p>決済はAppleが行うため、返金もAppleにご請求ください。<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>から申請できます。</p>
+      <p class="contact">お問い合わせ <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="foot">モアニャン · <a href="privacy.html">プライバシーポリシー</a> · <a href="mailto:sokurihj@gmail.com">sokurihj@gmail.com</a></footer>
+</div>
+<script>
+  // 첫 그림을 그린 뒤에 값을 바꿔야 CSS 전환이 걸린다(처음부터 0.45면 물드는 모습이 안 보인다).
+  requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('hero-pol').classList.add('filled')));
+  // 아래 칸의 앱 화면·쪽지는 화면에 들어올 때 살짝 떠오른다(한 번만).
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.2 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
